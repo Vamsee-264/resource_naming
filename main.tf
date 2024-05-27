@@ -12,6 +12,7 @@ locals {
     #global settings resource group labels
     rgName   = "${try(var.settings.name, "")}"
     rgSuffix = "${var.global_settings.naming.rgsuffix}"
+    rg1Suffix = "${var.global_settings.naming.rg1suffix}"
 
     #global settings resource labels
     aadds                                  = lookup(var.global_settings.naming.resourcelabels, "aadds", "AADDS")
